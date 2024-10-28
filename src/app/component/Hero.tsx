@@ -17,7 +17,7 @@ const Hero = () => {
           <a href="https://github.com/SakeenaMajeed" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
-          <a href="https://www.facebook.com/share/r/1Ca41tYgGD/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/sukaina.majeed.98?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
             <FaFacebook />
           </a>
         </div>
