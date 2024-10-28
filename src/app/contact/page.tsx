@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import React, { useState } from "react"; // Import useState
 import Swal from "sweetalert2";
-import '../styling/contact.css'; 
+import "../styling/contact.css";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -48,15 +48,21 @@ export default function Contact() {
     }
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   return (
-    <div className="contact-container"> {/* Add the contact-container class here */}
+    <div id="contact" className="contact-container">
+      {" "}
+      {/* Add the contact-container class here */}
       <form onSubmit={handleSubmit}>
-        <h2>Contact <span>Us</span></h2>
+        <h2>
+          Contact <span>Us</span>
+        </h2>
 
         <div>
           <label htmlFor="name">Name</label>

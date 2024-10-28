@@ -1,14 +1,16 @@
-/* Navbar Styles */
 header {
-  background-color: #031c38; /* Background color */
-  padding: 0.5rem 2rem; /* Padding */
+  background-color: #031c38;
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: padding 0.3s ease; /* Smooth transition for padding changes */
-  position: relative;
-  z-index: 1000; /* Ensures menu stays above other content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: padding 0.3s ease, background-color 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .navbar {
@@ -20,20 +22,15 @@ header {
 
 .logo {
   font-size: 24px;
-  color: white;
+  color: #f0a500;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.3s ease; /* Animation effect on hover */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Logo Animation */
 .logo:hover {
-  transform: scale(1.1); /* Slightly enlarge the logo on hover */
-}
-
-/* Animation on menu button click */
-.menu-button:focus + .logo {
-  transform: scale(0.9); /* Shrink logo when button is clicked */
+  transform: scale(1.1);
+  color: #fff;
 }
 
 .menu-button {
@@ -42,8 +39,13 @@ header {
   color: white;
   font-size: 24px;
   cursor: pointer;
-  display: none; /* Initially hidden for larger screens */
+  display: none;
   outline: none;
+  transition: color 0.3s ease;
+}
+
+.menu-button:hover {
+  color: #f0a500;
 }
 
 ul {
@@ -54,91 +56,105 @@ ul {
 }
 
 ul li {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 ul li a {
   text-decoration: none;
   color: white;
   font-size: 18px;
-  position: relative; /* For underline effect */
-  transition: color 0.3s ease; /* Smooth color transition */
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-/* Underline effect on hover */
 ul li a:hover {
-  color: #f0a500; /* Change text color on hover */
+  color: #f0a500;
 }
 
 ul li a:hover::after {
-  content: ''; /* Create a pseudo-element for underline */
+  content: "";
   display: block;
   width: 100%;
-  height: 2px; /* Thickness of the underline */
-  background: #f0a500; /* Color of the underline */
+  height: 2px;
+  background: #f0a500;
   position: absolute;
   left: 0;
-  bottom: -5px; /* Position the underline below the text */
-  transition: all 0.3s ease; /* Transition effect */
+  bottom: -5px;
+  transition: all 0.3s ease;
 }
 
-/* Mobile and Tablet Styles */
 @media (max-width: 1024px) {
   header {
-    padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+    padding: 0.5rem 1rem;
   }
 
   ul {
-    display: none; /* Hide the menu items by default on smaller screens */
+    display: none;
   }
 
   .menu-button {
-    display: block; /* Show menu button for tablet and mobile screens */
+    display: block;
   }
 
   .menu {
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: #002147; /* Background color on mobile */
+    background-color: #002147;
     flex-direction: column;
     width: 100%;
-    text-align: center;
-    height: 100vh;
+    height: calc(100vh - 60px);
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
-    display: none; /* Initially hidden */
+    display: none;
   }
 
   .menu.show {
     display: flex;
-    transform: translateY(0); /* Show menu when button is clicked */
+    transform: translateY(0);
   }
 
   ul li {
-    margin: 20px 0; /* Adjust margin for mobile menu items */
+    margin: 20px 0;
   }
 
   ul li a {
-    font-size: 20px; /* Increase font size for better readability on mobile */
+    font-size: 20px;
   }
 }
 
-/* Adjust for smaller mobile screens */
 @media (max-width: 600px) {
   .logo {
-    font-size: 20px; /* Make logo slightly smaller for smaller devices */
+    font-size: 20px;
   }
 
   .menu-button {
-    font-size: 28px; /* Make the menu button larger for easier access */
+    font-size: 28px;
   }
 
   ul li a {
-    font-size: 18px; /* Slightly decrease font size for small screens */
+    font-size: 18px;
   }
 
   header {
-    padding: 0.5rem 0.8rem; /* Further reduce padding for small mobile screens */
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .menu-button {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  ul li {
+    margin-left: 30px;
+  }
+
+  ul li a {
+    font-size: 18px;
   }
 }

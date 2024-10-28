@@ -1,132 +1,167 @@
-/* Hero Section Styles */
 .hero-container {
-  background-color: #031c38; /* Fallback color */
-  height: 100vh; /* Full viewport height */
+  background-color: #031c38;
+
+  min-height: 100vh;
+
   display: flex;
-  justify-content: space-between; /* Space between text and image */
+  justify-content: space-between;
+
   align-items: center;
-  color: white;
-  padding: 0 20px; /* Padding for smaller screens */
-  animation: fadeIn 1s ease; /* Animation for container */
+  color: #f0f0f0;
+
+  padding: 0 5%;
+
+  animation: fadeIn 1s ease;
+
+  flex-wrap: wrap;
+
+  gap: 40px;
 }
 
 .hero-content {
-  max-width: 600px;
+  flex: 1 1 50%;
+
   padding: 20px;
-  text-align: center; /* Center text */
-  opacity: 0; /* Initial opacity for animation */
-  animation: slideIn 1s forwards; /* Animation for content */
-  animation-delay: 0.5s; /* Delay for content animation */
+  text-align: left;
+  opacity: 0;
+
+  animation: slideIn 1s forwards;
+  animation-delay: 0.5s;
 }
 
 .hero-title {
-  font-size: 3rem; /* Adjust size as needed */
+  font-size: 3rem;
   margin-bottom: 20px;
+  font-weight: 700;
+  color: #ffcc00;
 }
 
 .hero-description {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+
   margin-bottom: 30px;
+  color: #d1d1d1;
 }
 
 .hero-button {
-  background-color: #f0a500; /* Button color */
-  color: #002147; /* Text color */
-  padding: 10px 20px;
+  background-color: #f0a500;
+
+  color: #002147;
+  padding: 12px 24px;
+
   text-decoration: none;
-  border: 2px solid transparent; /* Initial border */
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transition effect */
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(240, 165, 0, 0.4);
 }
 
 .hero-button:hover {
-  border-color: #f0a500; /* Add border color on hover */
-  background-color: #002147; /* Change background color on hover */
-  color: #fff; /* Change text color on hover */
-  transform: translateY(-5px); /* Slight lift effect on hover */
+  background-color: #002147;
+  color: #ffcc00;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(255, 204, 0, 0.5);
 }
 
-
-/* Image Styles */
 .hero-image {
-  max-width: 40%; /* Adjust width as needed */
-  margin-left: auto; /* Center the image */
-  margin-right: auto; /* Center the image */
-  opacity: 0; /* Initial opacity for animation */
-  animation: fadeIn 1s forwards; /* Animation for image */
-  animation-delay: 1s; /* Delay for image animation */
-  border-radius: 50%; /* Circular shape */
-  overflow: hidden; /* Hide overflow to keep background clean */
-  height: 500px; /* Set a specific height for the circular image */
-  display: flex; /* Center image within container */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  flex: 1 1 40%;
+
+  max-width: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+  border-radius: 50%;
+
+  overflow: hidden;
+  height: 400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero-image img {
-  width: 100%; /* Make the image responsive */
-  height: 100%; /* Make height responsive */
-  object-fit: cover; /* Cover the entire area */
+  width: 100%;
+
+  height: auto;
+
+  max-height: 100%;
+
+  object-fit: cover;
 }
 
-/* Social Icons Styling */
 .social-icons {
   display: flex;
-  gap: 1rem; /* Space between icons */
-  margin-top: 1rem; /* Space above the icons */
-  justify-content: center; /* Center the icons */
+  gap: 1.2rem;
+  margin-top: 1rem;
+  justify-content: flex-start;
 }
 
 .social-icons a {
-  color: white; /* Icon color */
-  font-size: 1.5rem; /* Icon size */
-  transition: color 0.3s; /* Smooth transition for color change */
+  color: #f0f0f0;
+  font-size: 1.7rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
- 
-  color: #ffcc00; /* Change color on hover */
+  color: #ffcc00;
+  transform: scale(1.1);
 }
 
-/* Animation keyframes */
 @keyframes fadeIn {
   from {
-      opacity: 0;
+    opacity: 0;
   }
+
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes slideIn {
   from {
-      transform: translateY(-20px); /* Slide from above */
-      opacity: 0;
+    transform: translateY(-20px);
+    opacity: 0;
   }
+
   to {
-      transform: translateY(0); /* End position */
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
   .hero-container {
-      flex-direction: column; /* Stack items on smaller screens */
-      align-items: center; /* Center items */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 20px;
   }
 
-  .hero-image {
-      max-width: 80%; /* Full width for the image on mobile */
-      margin-top: 20px; /* Space between text and image */
-      height: 300px; /* Adjust height for mobile */
+  .hero-content {
+    padding: 0;
   }
 
   .hero-title {
-      font-size: 2.5rem; /* Adjust font size for mobile */
+    font-size: 2.5rem;
   }
 
   .hero-description {
-      font-size: 1rem; /* Adjust font size for mobile */
+    font-size: 1.1rem;
+  }
+
+  .hero-button {
+    padding: 10px 20px;
+  }
+
+  .hero-image {
+    max-width: 90%;
+
+    height: auto;
   }
 }

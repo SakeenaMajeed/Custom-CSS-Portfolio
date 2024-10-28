@@ -1,7 +1,7 @@
-/* About Section */
 .about-section {
   background-color: #031c38;
   padding: 4rem 2rem;
+  position: relative;
 }
 
 .about-container {
@@ -11,7 +11,8 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 2rem; /* Added gap for better spacing */
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .about-image img {
@@ -19,6 +20,8 @@
   max-width: 400px;
   max-height: 600px;
   object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .about-content {
@@ -31,6 +34,8 @@
   font-weight: bold;
   margin-bottom: 1.5rem;
   text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .about-roles {
@@ -56,61 +61,57 @@
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  color: #f0a500;
 }
 
 .role-description {
   font-size: 0.9rem;
   line-height: 1.5;
+  opacity: 0.9;
 }
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
   .about-container {
-    flex-direction: column; /* Stack vertically on medium screens */
-    text-align: center; /* Center text for smaller screens */
+    flex-direction: column;
+    text-align: center;
   }
 
   .about-image {
-    margin-bottom: 2rem; /* Add bottom margin for spacing */
+    margin-bottom: 2rem;
   }
 
   .about-title {
-    font-size: 2rem; /* Slightly smaller font on smaller screens */
+    font-size: 2rem;
   }
 
   .about-content {
-    max-width: 100%; /* Full width content on medium screens */
+    max-width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  .about-container {
-    flex-direction: column; /* Stack vertically on smaller screens */
-  }
-
   .about-title {
-    font-size: 1.8rem; /* Smaller font for mobile screens */
+    font-size: 1.8rem;
   }
 
   .about-image img {
-    max-width: 100%; /* Full width image for small screens */
-    max-height: 300px; /* Reduce height for small screens */
+    max-width: 100%;
+    max-height: 300px;
   }
 
   .about-content {
-    max-width: 100%; /* Full width content on smaller screens */
-    padding: 0 1rem; /* Add some side padding */
+    padding: 0 1rem;
   }
 
   .about-role {
-    padding: 0.8rem; /* Reduced padding for smaller screen */
+    padding: 0.8rem;
   }
 
   .role-title {
-    font-size: 1rem; /* Smaller title */
+    font-size: 1rem;
   }
 
   .role-description {
-    font-size: 0.85rem; /* Smaller description font */
+    font-size: 0.85rem;
   }
 }
