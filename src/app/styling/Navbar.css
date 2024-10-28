@@ -1,0 +1,144 @@
+/* Navbar Styles */
+header {
+  background-color: #031c38; /* Background color */
+  padding: 0.5rem 2rem; /* Padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: padding 0.3s ease; /* Smooth transition for padding changes */
+  position: relative;
+  z-index: 1000; /* Ensures menu stays above other content */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Animation effect on hover */
+}
+
+/* Logo Animation */
+.logo:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+/* Animation on menu button click */
+.menu-button:focus + .logo {
+  transform: scale(0.9); /* Shrink logo when button is clicked */
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Initially hidden for larger screens */
+  outline: none;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin-left: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  position: relative; /* For underline effect */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Underline effect on hover */
+ul li a:hover {
+  color: #f0a500; /* Change text color on hover */
+}
+
+ul li a:hover::after {
+  content: ''; /* Create a pseudo-element for underline */
+  display: block;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background: #f0a500; /* Color of the underline */
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Position the underline below the text */
+  transition: all 0.3s ease; /* Transition effect */
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 1024px) {
+  header {
+    padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+  }
+
+  ul {
+    display: none; /* Hide the menu items by default on smaller screens */
+  }
+
+  .menu-button {
+    display: block; /* Show menu button for tablet and mobile screens */
+  }
+
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #002147; /* Background color on mobile */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    display: none; /* Initially hidden */
+  }
+
+  .menu.show {
+    display: flex;
+    transform: translateY(0); /* Show menu when button is clicked */
+  }
+
+  ul li {
+    margin: 20px 0; /* Adjust margin for mobile menu items */
+  }
+
+  ul li a {
+    font-size: 20px; /* Increase font size for better readability on mobile */
+  }
+}
+
+/* Adjust for smaller mobile screens */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 20px; /* Make logo slightly smaller for smaller devices */
+  }
+
+  .menu-button {
+    font-size: 28px; /* Make the menu button larger for easier access */
+  }
+
+  ul li a {
+    font-size: 18px; /* Slightly decrease font size for small screens */
+  }
+
+  header {
+    padding: 0.5rem 0.8rem; /* Further reduce padding for small mobile screens */
+  }
+}

@@ -1,0 +1,113 @@
+body {
+  background-color: #031c38;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.contact-container {
+  max-width: 600px; /* Maximum width for larger screens */
+  width: 100%; /* Full width for smaller screens */
+  margin: 50px auto; /* Center the form vertically and horizontally */
+  padding: 20px; /* Internal padding */
+  border: 1px solid #ccc; /* Light border for definition */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #002147; /* Form background color */
+}
+
+/* Form title styles */
+.contact-container h2 {
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Space below the title */
+  font-size: 2rem; /* Larger font size for the title */
+  color: #ffffff; /* Title color */
+}
+
+/* Label styles */
+.contact-container label {
+  display: block; /* Block display for labels */
+  margin-bottom: 5px; /* Space below labels */
+  font-weight: bold; /* Bold labels */
+  color: #ffffff; /* Label color */
+}
+
+/* Input and textarea styles */
+.contact-container input,
+.contact-container textarea {
+  width: 100%; /* Full width inputs */
+  padding: 12px; /* Inner padding */
+  margin-bottom: 15px; /* Space below inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size for inputs */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition for focus effect */
+}
+
+/* Input focus styles */
+.contact-container input:focus,
+.contact-container textarea:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button styles */
+.contact-container button {
+  width: 100%; /* Full width button */
+  padding: 12px; /* Inner padding */
+  background-color: #0056b3; /* Primary button color */
+  color: #ffffff; /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease-in-out; /* Transition for hover effect */
+}
+
+/* Button hover styles */
+.contact-container button:hover {
+  background-color: #004080; /* Darker blue on hover */
+}
+
+/* Responsive Styles for Tablets and Small Desktops */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .contact-container h2 {
+    font-size: 1.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .contact-container input,
+  .contact-container textarea {
+    font-size: 14px; /* Adjust input size */
+  }
+
+  .contact-container button {
+    font-size: 14px; /* Adjust button size */
+  }
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 480px) {
+  .contact-container {
+    max-width: 90%; /* Take up most of the screen width */
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .contact-container h2 {
+    font-size: 1.5rem; /* Adjust font size for mobile screens */
+  }
+
+  .contact-container input,
+  .contact-container textarea {
+    font-size: 13px; /* Adjust input size for mobile */
+  }
+
+  .contact-container button {
+    font-size: 13px; /* Adjust button size */
+    padding: 10px; /* Slightly smaller button padding */
+  }
+}

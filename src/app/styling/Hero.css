@@ -1,0 +1,132 @@
+/* Hero Section Styles */
+.hero-container {
+  background-color: #031c38; /* Fallback color */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: space-between; /* Space between text and image */
+  align-items: center;
+  color: white;
+  padding: 0 20px; /* Padding for smaller screens */
+  animation: fadeIn 1s ease; /* Animation for container */
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+  text-align: center; /* Center text */
+  opacity: 0; /* Initial opacity for animation */
+  animation: slideIn 1s forwards; /* Animation for content */
+  animation-delay: 0.5s; /* Delay for content animation */
+}
+
+.hero-title {
+  font-size: 3rem; /* Adjust size as needed */
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  background-color: #f0a500; /* Button color */
+  color: #002147; /* Text color */
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 2px solid transparent; /* Initial border */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transition effect */
+}
+
+.hero-button:hover {
+  border-color: #f0a500; /* Add border color on hover */
+  background-color: #002147; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+
+/* Image Styles */
+.hero-image {
+  max-width: 40%; /* Adjust width as needed */
+  margin-left: auto; /* Center the image */
+  margin-right: auto; /* Center the image */
+  opacity: 0; /* Initial opacity for animation */
+  animation: fadeIn 1s forwards; /* Animation for image */
+  animation-delay: 1s; /* Delay for image animation */
+  border-radius: 50%; /* Circular shape */
+  overflow: hidden; /* Hide overflow to keep background clean */
+  height: 500px; /* Set a specific height for the circular image */
+  display: flex; /* Center image within container */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.hero-image img {
+  width: 100%; /* Make the image responsive */
+  height: 100%; /* Make height responsive */
+  object-fit: cover; /* Cover the entire area */
+}
+
+/* Social Icons Styling */
+.social-icons {
+  display: flex;
+  gap: 1rem; /* Space between icons */
+  margin-top: 1rem; /* Space above the icons */
+  justify-content: center; /* Center the icons */
+}
+
+.social-icons a {
+  color: white; /* Icon color */
+  font-size: 1.5rem; /* Icon size */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.social-icons a:hover {
+ 
+  color: #ffcc00; /* Change color on hover */
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-20px); /* Slide from above */
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0); /* End position */
+      opacity: 1;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero-container {
+      flex-direction: column; /* Stack items on smaller screens */
+      align-items: center; /* Center items */
+  }
+
+  .hero-image {
+      max-width: 80%; /* Full width for the image on mobile */
+      margin-top: 20px; /* Space between text and image */
+      height: 300px; /* Adjust height for mobile */
+  }
+
+  .hero-title {
+      font-size: 2.5rem; /* Adjust font size for mobile */
+  }
+
+  .hero-description {
+      font-size: 1rem; /* Adjust font size for mobile */
+  }
+}
