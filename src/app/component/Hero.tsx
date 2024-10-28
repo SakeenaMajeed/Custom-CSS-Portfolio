@@ -1,9 +1,7 @@
 import React from 'react';
-import '../styling/Hero.css'; // Ensure to import your CSS file
+import '../styling/Hero.css'; 
 import Image from 'next/image';
-import { FaLinkedin, FaGithub, FaFacebook } from 'react-icons/fa'; // Import icons
-
-const Hero = () => {
+import { FaLinkedin, FaGithub, FaFacebook } from 'react-icons/fa'; const Hero = () => {
   return (
     <div className="hero-container">
       <div className="hero-content">
