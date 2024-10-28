@@ -1,12 +1,13 @@
 import React from 'react';
-import '../styling/footer.css'; 
+import '../styling/footer.css';
+
 
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-content">
-          <p>&copy; {new Date().getFullYear()} Sakeena-Majeed. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()}{ `Sakeena-Majeed. All rights reserved.`}</p>
           <ul className="social-links">
             <li>
               <a 
