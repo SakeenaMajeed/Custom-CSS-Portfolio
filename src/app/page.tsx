@@ -1,7 +1,7 @@
 
 import About from "./about/page";
-import Footer from "./component/Footer";
-import Hero from "./component/Hero";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 
 import Contact from "./contact/page";
 

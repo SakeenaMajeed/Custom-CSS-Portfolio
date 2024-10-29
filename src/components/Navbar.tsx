@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import '../styling/Navbar.css';
+import '@/styling/Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

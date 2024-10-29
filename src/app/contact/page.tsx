@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react"; // Import useState
 import Swal from "sweetalert2";
-import "../styling/contact.css";
+import "@/styling/contact.css";
 
 export default function Contact() {
   const [formData, setFormData] = useState({

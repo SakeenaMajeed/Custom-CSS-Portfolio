@@ -1,6 +1,7 @@
 import React from 'react';
-import '../styling/Hero.css'; 
 import Image from 'next/image';
+import '@/styling/Hero.css'; 
+
 import { FaLinkedin, FaGithub, FaFacebook } from 'react-icons/fa'; const Hero = () => {
   return (
     <div className="hero-container">

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../component/footer.css';
+import '@/styling/footer.css';
 
 
 const Footer: React.FC = () => {
